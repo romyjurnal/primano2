@@ -1,0 +1,54 @@
+import java.util.Scanner;  
+      
+    public class Prima {  
+        
+    public static void main(String[] args) {  
+      
+    System.out.println("========================================================");  
+    System.out.println(" Deret Bilangan Prima");  
+    System.out.println("========================================================");           
+      
+    Scanner input = new Scanner (System.in);          
+    
+    int i, j, min, max;  
+    boolean x;  
+    System.out.println("========================================================");  
+    System.out.print("Masukkan Nilai Batas Awal = ");  
+    min = input.nextInt();  
+    System.out.print("Masukkan Nilai Batas Akhir = ");  
+    max = input.nextInt();  
+      
+    while (min > max)  
+    {  
+    System.out.print("Batas akhir harus lebih besar dari batas awal.\nMasukkan nilai batas akhir lagi = ");  
+    max = input.nextInt();  
+    }  
+    System.out.println();  
+    System.out.println("Deret Bilangan Prima dari "+min+"-"+max+"");  
+      
+    for (i=min;i<=max;i++)  
+    {  
+    x=false;  
+    if (i==2)  
+    x=true;  
+    else  
+    {  
+    for (j=2;j<i;j++)  
+        {  
+    if (i%j==0)  
+            {  
+    x=false;  
+    break;  
+            }  
+    else  
+    x=true;  
+        }  
+    }  
+      
+    if (x)  
+    {  
+    System.out.printf(i+",");  
+    }  
+            }  
+        }  
+    }  
